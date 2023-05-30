@@ -191,7 +191,7 @@ public class SellerDaoJDBC implements SellerDao {
         }
     }
 
-    public Department instantiateDepartment(ResultSet rs){
+    public static Department instantiateDepartment(ResultSet rs){
         try {
             var dep = new Department();
             dep.setId(rs.getInt("DepartmentId"));
@@ -203,7 +203,7 @@ public class SellerDaoJDBC implements SellerDao {
         }
     }
 
-    public Seller instantiateSeller (Department dep,ResultSet rs){
+    public static Seller instantiateSeller (Department dep,ResultSet rs){
         try {
             var obj = new Seller();
             obj.setId(rs.getInt("Id"));
